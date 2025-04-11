@@ -9,13 +9,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.brazetest"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET"
+      ],
+      "package": "com.anonymous.brazetest"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +37,14 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "@braze/expo-plugin",
+        {
+          "iosApiKey": "00000000000000000000000000000000",
+          "androidApiKey": "00000000000000000000000000000000",
+          "brazeEndpoint": "https://sdk.braze.com"
         }
       ]
     ],
